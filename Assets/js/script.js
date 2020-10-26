@@ -1,9 +1,13 @@
 //displays the current date
 var date = moment().format('MMMM Do YYYY');
-var time = moment().format('')
 var currentDate = document.createElement("h3");
 document.getElementById("currentDay").appendChild(currentDate);
 currentDate.textContent = date;
+
+var now = moment();
+var then = moment().hour(9).minute(0).second(0);
+
+var timeSlots = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 //save any task input to local storage when save button is clicked
 var nineAM = document.getElementById("taskOne");
@@ -113,12 +117,7 @@ rehydrateSeven();
 rehydrateEight();
 rehydrateNine();
 
-//if saveButton is clicked, and storageInput has textContent, save to local storage
-//show all tasks after page is refreshed
-//display past events as grey
-
-
-//display current events as red
-//display future events as green
-
+//if task time is < moment(), textarea background is grey
+//if task time is === moment(), textarea background is red
+//if task time is > moment(), text area background is green
 
