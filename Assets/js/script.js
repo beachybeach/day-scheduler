@@ -7,20 +7,111 @@ currentDate.textContent = date;
 
 //save any task input to local storage when save button is clicked
 var nineAM = document.getElementById("taskOne");
-var saveButton = document.getElementById("buttonOne");
+var tenAM = document.getElementById("taskTwo");
+var elevenAM = document.getElementById("taskThree");
+var twelvePM = document.getElementById("taskFour");
+var onePM = document.getElementById("taskFive");
+var twoPM = document.getElementById("taskSix");
+var threePM = document.getElementById("taskSeven");
+var fourPM = document.getElementById("taskEight");
+var fivePM = document.getElementById("taskNine");
 
-console.log(nineAM.textContent);
 
-var save = saveButton.addEventListener("click", function() {
-    localStorage.setItem('task One', nineAM.value);
+var saveBtnOne = document.getElementById("btnOne");
+var saveBtnTwo = document.getElementById("btnTwo");
+var saveBtnThree = document.getElementById("btnThree");
+var saveBtnFour = document.getElementById("btnFour");
+var saveBtnFive = document.getElementById("btnFive");
+var saveBtnSix = document.getElementById("btnSix");
+var saveBtnSeven = document.getElementById("btnSeven");
+var saveBtnEight = document.getElementById("btnEight");
+var saveBtnNine = document.getElementById("btnNine");
+
+var saveOne = saveBtnOne.addEventListener("click", function() {
+    localStorage.setItem('taskone', nineAM.value);
 })
 
-var rehydrate = function () {
-    var saveTask = localStorage.getItem('task One');
+var saveTwo = saveBtnTwo.addEventListener("click", function() {
+    localStorage.setItem('tasktwo', tenAM.value);
+})
+
+var saveThree = saveBtnThree.addEventListener("click", function() {
+    localStorage.setItem('taskthree', elevenAM.value);
+})
+
+var saveFour = saveBtnFour.addEventListener("click", function() {
+    localStorage.setItem('taskfour', twelvePM.value);
+})
+
+var saveFive = saveBtnFive.addEventListener("click", function() {
+    localStorage.setItem('taskfive', onePM.value);
+})
+
+var saveSix = saveBtnSix.addEventListener("click", function() {
+    localStorage.setItem('tasksix', twoPM.value);
+})
+
+var saveSeven = saveBtnSeven.addEventListener("click", function() {
+    localStorage.setItem('taskseven', threePM.value);
+})
+
+var saveEight = saveBtnEight.addEventListener("click", function() {
+    localStorage.setItem('taskeight', fourPM.value);
+})
+
+var saveNine = saveBtnNine.addEventListener("click", function() {
+    localStorage.setItem('tasknine', fivePM.value);
+})
+
+
+
+
+var rehydrateOne = function () {
+    var saveTask = localStorage.getItem('taskone');
     nineAM.value = saveTask;
 }
+var rehydrateTwo = function () {
+    var saveTask = localStorage.getItem('tasktwo');
+    tenAM.value = saveTask;
+}
+var rehydrateThree = function () {
+    var saveTask = localStorage.getItem('taskthree');
+    elevenAM.value = saveTask;
+}
+var rehydrateFour = function () {
+    var saveTask = localStorage.getItem('taskfour');
+    twelvePM.value = saveTask;
+}
+var rehydrateFive = function () {
+    var saveTask = localStorage.getItem('taskfive');
+    onePM.value = saveTask;
+}
+var rehydrateSix = function () {
+    var saveTask = localStorage.getItem('tasksix');
+    twoPM.value = saveTask;
+}
+var rehydrateSeven = function () {
+    var saveTask = localStorage.getItem('taskseven');
+    threePM.value = saveTask;
+}
+var rehydrateEight = function () {
+    var saveTask = localStorage.getItem('taskeight');
+    fourPM.value = saveTask;
+}
+var rehydrateNine = function () {
+    var saveTask = localStorage.getItem('tasknine');
+    fivePM.value = saveTask;
+}
 
-rehydrate();
+rehydrateOne();
+rehydrateTwo();
+rehydrateThree();
+rehydrateFour();
+rehydrateFive();
+rehydrateSix();
+rehydrateSeven();
+rehydrateEight();
+rehydrateNine();
 
 //if saveButton is clicked, and storageInput has textContent, save to local storage
 //show all tasks after page is refreshed
@@ -29,7 +120,5 @@ rehydrate();
 
 //display current events as red
 //display future events as green
-
-
 
 
